@@ -2,6 +2,13 @@
 import { Translation, Project, Service, Testimonial, BlogPost } from './types';
 import { LayoutTemplate, Code, TrendingUp, Share2 } from 'lucide-react';
 
+// Importar imágenes directamente
+import germanImage from './img/proyectos/german.webp';
+import mambaImage from './img/proyectos/mamba2.webp';
+import queleregaloImage from './img/proyectos/queleregalo.webp';
+import smilehotdogImage from './img/proyectos/smilehotdog.webp';
+import smilesmashImage from './img/proyectos/smilesmash.webp';
+
 export const translations: { [key: string]: Translation } = {
   es: {
     nav_home: "Inicio",
@@ -344,11 +351,11 @@ export const translations: { [key: string]: Translation } = {
 };
 
 export const MOCK_PROJECTS: Project[] = [
-  { id: 1, titleKey: 'project_title_1', categoryKey: 'portfolio_filter_web', image: '/img/proyectos/german.webp', descriptionKey: 'project_desc_1', url: 'https://germannoriega.vercel.app/' },
-  { id: 2, titleKey: 'project_title_4', categoryKey: 'portfolio_filter_web', image: '/img/proyectos/smilesmash.webp', descriptionKey: 'project_desc_4', url: 'https://www.smilesmashburger.com/' },
-  { id: 3, titleKey: 'project_title_3', categoryKey: 'portfolio_filter_web', image: '/img/proyectos/smilehotdog.webp', descriptionKey: 'project_desc_3', url: 'https://www.smilehotdog.es/' },
-  { id: 4, titleKey: 'project_title_2', categoryKey: 'portfolio_filter_web', image: '/img/proyectos/mamba2.webp', descriptionKey: 'project_desc_2', url: 'https://comet-x9-orb.resiz.es/' },
-  { id: 5, titleKey: 'project_title_5', categoryKey: 'portfolio_filter_ai', image: '/img/proyectos/queleregalo.webp', descriptionKey: 'project_desc_5', url: 'https://queleregalo.es' },
+  { id: 1, titleKey: 'project_title_1', categoryKey: 'portfolio_filter_web', image: germanImage, descriptionKey: 'project_desc_1', url: 'https://germannoriega.vercel.app/' },
+  { id: 2, titleKey: 'project_title_4', categoryKey: 'portfolio_filter_web', image: smilesmashImage, descriptionKey: 'project_desc_4', url: 'https://www.smilesmashburger.com/' },
+  { id: 3, titleKey: 'project_title_3', categoryKey: 'portfolio_filter_web', image: smilehotdogImage, descriptionKey: 'project_desc_3', url: 'https://www.smilehotdog.es/' },
+  { id: 4, titleKey: 'project_title_2', categoryKey: 'portfolio_filter_web', image: mambaImage, descriptionKey: 'project_desc_2', url: 'https://comet-x9-orb.resiz.es/' },
+  { id: 5, titleKey: 'project_title_5', categoryKey: 'portfolio_filter_ai', image: queleregaloImage, descriptionKey: 'project_desc_5', url: 'https://queleregalo.es' },
   // { id: 6, titleKey: 'project_title_6', categoryKey: 'portfolio_filter_web', image: 'https://picsum.photos/seed/project6/600/400', descriptionKey: 'project_desc_6' },
 ];
 
