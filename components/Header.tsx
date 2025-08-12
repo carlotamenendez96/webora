@@ -13,13 +13,11 @@ const Header: React.FC = () => {
     { to: '/servicios', label: t.nav_services },
     { to: '/portafolio', label: t.nav_portfolio },
     { to: '/nosotros', label: t.nav_about },
-    { to: '/blog', label: t.nav_blog },
+    // { to: '/blog', label: t.nav_blog }, // Oculto temporalmente
     { to: '/contacto', label: t.nav_contact },
   ];
 
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setLanguage(e.target.value as 'es' | 'en');
-  };
+  // Función eliminada - ahora se cambia el idioma directamente con setLanguage
 
   const activeLinkStyle = {
     color: '#00F7FF',
@@ -66,20 +64,14 @@ const Header: React.FC = () => {
         {/* Lado derecho con mejoras */}
         <div className="hidden lg:flex items-center space-x-6">
           {/* Selector de idioma mejorado */}
-          <div className="relative group">
-            <div className="relative">
-              <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-white/70 group-hover:text-cyan transition-colors duration-300" size={18}/>
-              <select
-                value={language}
-                onChange={handleLanguageChange}
-                className="bg-white/20 text-white rounded-full py-2 pl-10 pr-6 appearance-none focus:outline-none focus:ring-2 focus:ring-cyan cursor-pointer hover:bg-white/30 transition-all duration-300 border border-white/20 hover:border-cyan/50"
-              >
-                <option value="es" className="bg-blue-deep">ES</option>
-                <option value="en" className="bg-blue-deep">EN</option>
-              </select>
-            </div>
-            {/* Indicador de hover */}
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan transition-all duration-300 group-hover:w-full"></div>
+          <div className="relative">
+            <button
+              onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+              className="relative bg-white/10 text-white rounded-full py-2.5 px-4 appearance-none focus:outline-none focus:ring-2 focus:ring-cyan/50 cursor-pointer transition-all duration-300 border border-white/30 text-sm font-medium min-w-[60px] flex items-center justify-center space-x-2"
+            >
+              <Globe className="text-white/80 transition-colors duration-300" size={16}/>
+              <span className="font-bold">{language.toUpperCase()}</span>
+            </button>
           </div>
           
           {/* Botón CTA mejorado */}
@@ -135,15 +127,13 @@ const Header: React.FC = () => {
                             transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </Link>
              <div className="relative mt-4">
-                <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-white/70" size={20}/>
-                <select
-                  value={language}
-                  onChange={handleLanguageChange}
-                  className="bg-white/20 text-white text-lg rounded-full py-2 pl-10 pr-5 appearance-none focus:outline-none focus:ring-2 focus:ring-cyan cursor-pointer hover:bg-white/30 transition-all duration-300 border border-white/20 hover:border-cyan/50"
+                <button
+                  onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+                  className="relative bg-white/10 text-white rounded-full py-3 px-6 appearance-none focus:outline-none focus:ring-2 focus:ring-cyan/50 cursor-pointer transition-all duration-300 border border-white/30 text-lg font-medium min-w-[100px] flex items-center justify-center space-x-3"
                 >
-                  <option value="es" className="bg-blue-deep">Español</option>
-                  <option value="en" className="bg-blue-deep">English</option>
-                </select>
+                  <Globe className="text-white/80" size={18}/>
+                  <span className="font-bold">{language === 'es' ? 'Español' : 'English'}</span>
+                </button>
             </div>
           </nav>
         </div>

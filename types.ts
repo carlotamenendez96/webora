@@ -62,6 +62,20 @@ export interface Translation {
   home_testimonials_title: string;
   home_testimonials_subtitle: string;
   home_cta_strip_title: string;
+  
+  // Sección de proceso
+  home_process_title: string;
+  home_process_subtitle: string;
+  home_process_step1_title: string;
+  home_process_step1_desc: string;
+  home_process_step2_title: string;
+  home_process_step2_desc: string;
+  home_process_step3_title: string;
+  home_process_step3_desc: string;
+  home_process_step4_title: string;
+  home_process_step4_desc: string;
+  home_process_step5_title: string;
+  home_process_step5_desc: string;
 
   // Services Page
   services_page_title: string;
@@ -127,6 +141,11 @@ export interface Translation {
   about_milestone3_year: string;
   about_milestone3_title: string;
   about_milestone3_desc: string;
+  about_story_title: string;
+  about_story_paragraph1: string;
+  about_story_paragraph2: string;
+  about_story_paragraph3: string;
+  about_story_paragraph4: string;
 
   // Blog Page
   blog_page_title: string;
@@ -166,4 +185,27 @@ export interface Translation {
   footer_links_title: string;
   footer_social_title: string;
   footer_copyright: string;
+  
+  // Tags para TagsPhysics
+  tag_fluid_animations: string;
+  tag_design: string;
+  tag_gsap: string;
+  tag_startup: string;
+  tag_backend: string;
+  tag_framer: string;
+  tag_animations: string;
+  tag_vue: string;
+  tag_saas: string;
+  tag_web_development: string;
+  tag_react: string;
+  tag_typescript: string;
+  tag_tailwind: string;
+  tag_nodejs: string;
+  tag_api: string;
+  tag_seo: string;
+  tag_marketing: string;
+  tag_branding: string;
+  tag_wordpress: string;
+  tag_ecommerce: string;
+  tag_mobile: string;
 }

@@ -8,7 +8,6 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import { MOCK_SERVICES, MOCK_PROJECTS, MOCK_TESTIMONIALS } from '../constants';
 import { Translation } from '../types';
 import { ArrowRight, Star } from 'lucide-react';
-import PhysicsTags from '../components/PhysicsTags';
 import TagsPhysics from '../components/Tagsphysics';
 
 import { gsap, ScrollTrigger, SplitText } from '../utils/gsap';
@@ -86,6 +85,42 @@ const Home: React.FC = () => {
         }
       });
 
+      // Historia personal section animation
+      const storySection = document.querySelector('.story-image, .story-content');
+      if (storySection) {
+        const storyImage = document.querySelector('.story-image');
+        const storyContent = document.querySelector('.story-content');
+        
+        if (storyImage) {
+          gsap.from(storyImage, {
+            opacity: 0,
+            x: -50,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: storyImage,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse',
+            },
+          });
+        }
+
+        if (storyContent) {
+          gsap.from(storyContent, {
+            opacity: 0,
+            x: 50,
+            duration: 1,
+            ease: 'power2.out',
+            delay: 0.3,
+            scrollTrigger: {
+              trigger: storyContent,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse',
+            },
+          });
+        }
+      }
+
     }, heroRef);
 
     return () => ctx.revert();
@@ -98,8 +133,7 @@ const Home: React.FC = () => {
   });
 
   return (
-    <>
-
+    <div style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
       {/* Hero Section */}
       <section 
         ref={heroRef}
@@ -221,7 +255,9 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '2rem'
+            gap: '2rem',
+            maxWidth: '100%',
+            overflow: 'hidden'
           }}>
             {MOCK_SERVICES.map((service, index) => (
               <div key={service.id} className="bg-white p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 border border-gray-100 group min-h-[300px]">
@@ -244,35 +280,13 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+
+
       <section className=" bg-gradient-to-br from-white-50 to-blue-deep/5">
         <TagsPhysics />
       </section>
-      {/* Results Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <SectionTitle title={t.home_results_title} subtitle={t.home_results_subtitle} />
-          <div ref={el => { sectionsRef.current[1] = el; }} className="grid md:grid-cols-3 gap-8 mt-12 text-center">
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <span className="text-5xl font-poppins font-bold text-magenta">
-                +<AnimatedCounter endValue={75} />%
-              </span>
-              <p className="mt-2 text-lg text-gray-600">{t.home_results_metric1_label}</p>
-            </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <span className="text-5xl font-poppins font-bold text-magenta">
-                +<AnimatedCounter endValue={30} />%
-              </span>
-              <p className="mt-2 text-lg text-gray-600">{t.home_results_metric2_label}</p>
-            </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <span className="text-5xl font-poppins font-bold text-magenta">
-                <AnimatedCounter endValue={150} />+
-              </span>
-              <p className="mt-2 text-lg text-gray-600">{t.home_results_metric3_label}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Featured Portfolio Section */}
       <section className="py-20 bg-gray-100">
@@ -298,6 +312,98 @@ const Home: React.FC = () => {
             >
               {t.portfolio_page_title} <ArrowRight className="ml-2" size={20} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+            {/* Process Section - ¿Cómo lo hacemos? */}
+            <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-poppins font-bold text-gray-900 mb-6">
+              {t.home_process_title}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              {t.home_process_subtitle}
+            </p>
+          </div>
+          
+          {/* Process Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+            {/* Step 1 */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="relative mb-6">
+                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <span className="text-white text-xl font-bold font-poppins">1</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+                {t.home_process_step1_title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t.home_process_step1_desc}
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="relative mb-6">
+                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <span className="text-white text-xl font-bold font-poppins">2</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+                {t.home_process_step2_title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t.home_process_step2_desc}
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="relative mb-6">
+                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <span className="text-white text-xl font-bold font-poppins">3</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+                {t.home_process_step3_title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t.home_process_step3_desc}
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="relative mb-6">
+                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <span className="text-white text-xl font-bold font-poppins">4</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+                {t.home_process_step4_title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t.home_process_step4_desc}
+              </p>
+            </div>
+
+            {/* Step 5 */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="relative mb-6">
+                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <span className="text-white text-xl font-bold font-poppins">5</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+                {t.home_process_step5_title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {t.home_process_step5_desc}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -334,7 +440,7 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

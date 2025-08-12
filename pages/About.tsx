@@ -39,11 +39,11 @@ const About: React.FC = () => {
         });
 
         items.forEach(item => {
-          gsap.from(item, {
+          gsap.from(item as HTMLElement, {
             opacity: 0,
             x: -50,
             scrollTrigger: {
-              trigger: item,
+              trigger: item as HTMLElement,
               start: 'top 85%',
               toggleActions: 'play none none reverse',
             },
@@ -77,11 +77,11 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-24">
+          {/* <div className="mt-24">
             <SectionTitle title={t.about_timeline_title} subtitle={t.about_timeline_subtitle} />
             <div ref={timelineRef} className="relative max-w-2xl mx-auto mt-12">
               <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-1 bg-gray-200 timeline-line"></div>
-              <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-1 bg-blue-deep origin-top scale-y-0 timeline-line-progress"></div>
+              <div className="absolute left-1/2 -translate-x-2 top-0 h-full w-1 bg-blue-deep origin-top scale-y-0 timeline-line-progress"></div>
               {timelineData.map((item, index) => (
                 <div key={index} className="timeline-item relative pl-16 mb-16 ml-[calc(50%+2rem)]">
                   <div className="absolute -left-16 top-0 ml-[calc(50%-1.6rem)] flex items-center justify-center w-12 h-12 bg-blue-deep text-white font-bold rounded-full shadow-md">
@@ -94,7 +94,7 @@ const About: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
