@@ -83,19 +83,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ service, index }) => {
         </div>
         
         {/* Icono de flecha con animación mejorada */}
-        <div className="relative">
-          <ChevronDown
-            size={28}
-            className={`text-blue-deep transform transition-all duration-500 ease-out ${
-              isOpen ? 'rotate-180 text-magenta scale-110' : 'group-hover:scale-110 group-hover:text-magenta'
-            }`}
-          />
-          
-          {/* Indicador de estado */}
-          <div className={`absolute -top-1 -right-1 w-3 h-3 rounded-full transition-all duration-300 ${
-            isOpen ? 'bg-magenta scale-100' : 'bg-blue-deep/30 scale-0'
-          }`}></div>
-        </div>
+        <ChevronDown
+          size={28}
+          className={`text-blue-deep transform transition-all duration-500 ease-out ${
+            isOpen ? 'rotate-180 text-magenta scale-110' : 'group-hover:scale-110 group-hover:text-magenta'
+          }`}
+        />
       </button>
       
       <div
@@ -112,7 +105,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ service, index }) => {
                 <span className="w-2 h-2 bg-magenta rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
                 {t.service_process_title}
               </h4>
-              <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
+              <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300" style={{whiteSpace: 'pre-line'}}>
                 {t[service.details.processKey as keyof Translation]}
               </p>
             </div>
@@ -128,14 +121,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ service, index }) => {
             </div>
           </div>
           
-          {/* Botón de acción adicional */}
-          <div className="mt-8 text-center">
-            <button className="inline-flex items-center bg-gradient-to-r from-blue-deep to-magenta text-white font-semibold py-3 px-6 rounded-full
-                             transform hover:scale-105 hover:shadow-lg transition-all duration-300 group">
-              <span>Conocer más</span>
-              <ChevronDown size={20} className="ml-2 transform group-hover:translate-y-1 transition-transform duration-300" />
-            </button>
-          </div>
+
         </div>
       </div>
     </div>

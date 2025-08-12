@@ -7,6 +7,7 @@ export interface Project {
   categoryKey: string;
   image: string;
   descriptionKey: string;
+  url: string;
 }
 
 export interface Service {

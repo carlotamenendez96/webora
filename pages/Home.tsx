@@ -658,13 +658,16 @@ const Home: React.FC = () => {
             </Link>
             
             {/* Botón secundario */}
-            <button className="group inline-flex items-center border-2 border-white/30 text-white font-medium py-4 px-8 rounded-full text-lg font-poppins
-                             hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm">
+            <Link
+              to="/portafolio"
+              className="group inline-flex items-center border-2 border-white/30 text-white font-medium py-4 px-8 rounded-full text-lg font-poppins
+                         hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
+            >
               <svg className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               {t.home_cta_button_portfolio}
-            </button>
+            </Link>
           </div>
           
           {/* Texto de confianza */}

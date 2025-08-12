@@ -69,7 +69,13 @@ const Portfolio: React.FC = () => {
           
           <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map(project => (
-              <div key={project.id} className="group relative block overflow-hidden rounded-lg shadow-lg cursor-pointer">
+              <a 
+                key={project.id} 
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-lg shadow-lg cursor-pointer"
+              >
                 <img loading="lazy" src={project.image} alt={t[project.titleKey as keyof Translation]} className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -83,7 +89,7 @@ const Portfolio: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
