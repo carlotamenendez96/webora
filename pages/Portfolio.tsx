@@ -18,8 +18,8 @@ const Portfolio: React.FC = () => {
   const filters = [
     { key: 'all', labelKey: 'portfolio_filter_all' },
     { key: 'portfolio_filter_web', labelKey: 'portfolio_filter_web' },
-    { key: 'portfolio_filter_ecommerce', labelKey: 'portfolio_filter_ecommerce' },
-    { key: 'portfolio_filter_branding', labelKey: 'portfolio_filter_branding' },
+    // { key: 'portfolio_filter_ecommerce', labelKey: 'portfolio_filter_ecommerce' }, // Oculto temporalmente
+    { key: 'portfolio_filter_ai', labelKey: 'portfolio_filter_ai' },
   ];
 
   const filteredProjects = useMemo(() => {

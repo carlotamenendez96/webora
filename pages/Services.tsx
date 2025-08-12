@@ -202,15 +202,17 @@ const Services: React.FC = () => {
           <div className="mt-16 text-center">
             <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
               <h3 className="text-2xl font-poppins font-bold text-blue-deep mb-4">
-                ¿Necesitas algo más específico?
+                {t.service_cta_title}
               </h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Cada proyecto es único. Si tienes necesidades especiales o quieres personalizar alguno de nuestros servicios, 
-                estamos aquí para ayudarte a crear la solución perfecta.
+                {t.service_cta_description}
               </p>
-              <button className="inline-flex items-center bg-gradient-to-r from-magenta to-blue-deep text-white font-bold py-4 px-8 rounded-full
-                               transform hover:scale-105 hover:shadow-2xl transition-all duration-300 group">
-                <span>Hablemos de tu proyecto</span>
+              <button 
+                onClick={() => window.location.href = '/#/contacto'}
+                className="inline-flex items-center bg-gradient-to-r from-magenta to-blue-deep text-white font-bold py-4 px-8 rounded-full
+                               transform hover:scale-105 hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+              >
+                <span>{t.service_cta_button}</span>
                 <ChevronDown size={24} className="ml-2 transform group-hover:translate-y-1 transition-transform duration-300" />
               </button>
             </div>

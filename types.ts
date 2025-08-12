@@ -98,6 +98,9 @@ export interface Translation {
   service_deliverables_social: string;
   service_process_title: string;
   service_deliverables_title: string;
+  service_cta_title: string;
+  service_cta_description: string;
+  service_cta_button: string;
 
   // Portfolio Page
   portfolio_page_title: string;
@@ -105,7 +108,7 @@ export interface Translation {
   portfolio_filter_all: string;
   portfolio_filter_web: string;
   portfolio_filter_ecommerce: string;
-  portfolio_filter_branding: string;
+  portfolio_filter_ai: string;
   project_title_1: string;
   project_desc_1: string;
   project_category_1: string;

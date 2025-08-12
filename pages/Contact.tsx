@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-16 h-96 rounded-lg overflow-hidden shadow-xl">
+          {/* <div className="mt-16 h-96 rounded-lg overflow-hidden shadow-xl">
              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086431209355!2d-122.4194154846813!3d37.77492957975949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c1c0e3ab3%3A0x41ecf3c4c01758f!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1678886400000!5m2!1sen!2sus"
                 width="100%"
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Google Maps Location"
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

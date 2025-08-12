@@ -8,7 +8,7 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import { MOCK_SERVICES, MOCK_PROJECTS, MOCK_TESTIMONIALS } from '../constants';
 import { Translation } from '../types';
 import { ArrowRight, Star } from 'lucide-react';
-import TagsPhysics from '../components/Tagsphysics';
+import TagsPhysics from '../components/TagsPhysics';
 
 import { gsap, ScrollTrigger, SplitText } from '../utils/gsap';
 
@@ -236,21 +236,12 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* <section>
-        <PhysicsTags />
-      </section> */}
-
       
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-deep/5">
         <div className="container mx-auto px-6">
           <SectionTitle title={t.home_services_title} subtitle={t.home_services_subtitle} />
           
-          {/* Debug temporal */}
-          {/* <div className="bg-blue-100 p-4 mb-4 rounded text-center">
-            <p className="text-black font-bold">DEBUG: MOCK_SERVICES tiene {MOCK_SERVICES.length} elementos</p>
-            <p className="text-black">Servicios: {MOCK_SERVICES.map(s => s.titleKey).join(', ')}</p>
-          </div> */}
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12" style={{
             display: 'grid',
@@ -282,7 +273,7 @@ const Home: React.FC = () => {
       </section>
 
 
-
+      {/* Tags Physics Section */}
       <section className=" bg-gradient-to-br from-white-50 to-blue-deep/5">
         <TagsPhysics />
       </section>
@@ -316,8 +307,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-            {/* Process Section - ¿Cómo lo hacemos? */}
-            <section className="py-20 bg-white">
+      {/* Process Section - ¿Cómo lo hacemos? */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-poppins font-bold text-gray-900 mb-6">
