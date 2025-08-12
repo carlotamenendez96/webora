@@ -62,6 +62,15 @@ export interface Translation {
   home_testimonials_title: string;
   home_testimonials_subtitle: string;
   home_cta_strip_title: string;
+  home_cta_subtitle: string;
+  home_cta_stats_projects: string;
+  home_cta_stats_projects_label: string;
+  home_cta_stats_satisfaction: string;
+  home_cta_stats_satisfaction_label: string;
+  home_cta_stats_support: string;
+  home_cta_stats_support_label: string;
+  home_cta_button_portfolio: string;
+  home_cta_trust_text: string;
   
   // Sección de proceso
   home_process_title: string;

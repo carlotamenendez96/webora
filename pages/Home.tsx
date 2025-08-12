@@ -322,13 +322,43 @@ const Home: React.FC = () => {
           {/* Process Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
             {/* Step 1 */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+              {/* Partículas flotantes para Step 1 */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Partícula con movimiento de rebote */}
+                <div className="absolute top-4 left-4 w-1 h-1 bg-cyan/60 rounded-full animate-bounce-gentle" style={{animationDelay: '0s'}}></div>
+                
+                {/* Partícula con trayectoria en forma de 8 */}
+                <div className="absolute top-6 right-6 w-1.5 h-1.5 bg-magenta/50 rounded-full animate-float" style={{
+                  animationDelay: '0.5s',
+                  animation: 'float 4s ease-in-out infinite, spin 8s linear infinite'
+                }}></div>
+                
+                {/* Partícula con movimiento espiral */}
+                <div className="absolute bottom-8 left-6 w-1 h-1 bg-blue-deep/40 rounded-full" style={{
+                  animation: 'spiral 6s ease-in-out infinite',
+                  animationDelay: '1s'
+                }}></div>
+                
+                {/* Partícula con rebote y escalado */}
+                <div className="absolute bottom-6 right-4 w-1.5 h-1.5 bg-cyan/30 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '1.5s',
+                  animation: 'bounce-gentle 3s ease-in-out infinite, scale-breathe 4s ease-in-out infinite'
+                }}></div>
+              </div>
+              
               <div className="relative mb-6">
-                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-deep to-magenta rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md relative">
                   <span className="text-white text-xl font-bold font-poppins">1</span>
+                  
+                  {/* Partículas alrededor del círculo */}
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-cyan/80 rounded-full animate-ping-slow" style={{animationDelay: '0.2s'}}></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-magenta/80 rounded-full animate-ping-slow" style={{animationDelay: '0.8s'}}></div>
+                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-blue-deep/60 rounded-full animate-ping-slow" style={{animationDelay: '1.4s'}}></div>
+                  <div className="absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-cyan/60 rounded-full animate-ping-slow" style={{animationDelay: '2s'}}></div>
                 </div>
               </div>
-              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-magenta transition-colors duration-300">
                 {t.home_process_step1_title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -337,13 +367,46 @@ const Home: React.FC = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+              {/* Partículas flotantes para Step 2 */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Partícula con movimiento de rebote y rotación */}
+                <div className="absolute top-4 left-4 w-1.5 h-1.5 bg-magenta/50 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '0.3s',
+                  animation: 'bounce-gentle 2.5s ease-in-out infinite, spin 6s linear infinite'
+                }}></div>
+                
+                {/* Partícula con trayectoria en forma de infinito */}
+                <div className="absolute top-6 right-6 w-1 h-1 bg-cyan/60 rounded-full" style={{
+                  animationDelay: '0.8s',
+                  animation: 'infinity 5s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con movimiento de onda */}
+                <div className="absolute bottom-8 left-6 w-1.5 h-1.5 bg-magenta/40 rounded-full" style={{
+                  animationDelay: '1.3s',
+                  animation: 'wave 4s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con rebote y escalado */}
+                <div className="absolute bottom-6 right-4 w-1 h-1 bg-cyan/30 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '1.8s',
+                  animation: 'bounce-gentle 3.5s ease-in-out infinite, scale-breathe 5s ease-in-out infinite'
+                }}></div>
+              </div>
+              
               <div className="relative mb-6">
-                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-14 h-14 bg-gradient-to-br from-magenta to-cyan rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md relative">
                   <span className="text-white text-xl font-bold font-poppins">2</span>
+                  
+                  {/* Partículas alrededor del círculo */}
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-magenta/80 rounded-full animate-ping-slow" style={{animationDelay: '0.4s'}}></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan/80 rounded-full animate-ping-slow" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-magenta/60 rounded-full animate-ping-slow" style={{animationDelay: '1.6s'}}></div>
+                  <div className="absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-cyan/60 rounded-full animate-ping-slow" style={{animationDelay: '2.2s'}}></div>
                 </div>
               </div>
-              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-cyan transition-colors duration-300">
                 {t.home_process_step2_title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -352,13 +415,46 @@ const Home: React.FC = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+              {/* Partículas flotantes para Step 3 */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Partícula con movimiento de rebote y escalado */}
+                <div className="absolute top-4 left-4 w-1 h-1 bg-cyan/60 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '0.6s',
+                  animation: 'bounce-gentle 2.8s ease-in-out infinite, scale-breathe 3.5s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con trayectoria en forma de diamante */}
+                <div className="absolute top-6 right-6 w-1.5 h-1.5 bg-blue-deep/50 rounded-full" style={{
+                  animationDelay: '1.1s',
+                  animation: 'diamond 6s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con movimiento de zigzag */}
+                <div className="absolute bottom-8 left-6 w-1.5 h-1.5 bg-cyan/40 rounded-full" style={{
+                  animationDelay: '1.6s',
+                  animation: 'zigzag 4.5s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con rebote y rotación */}
+                <div className="absolute bottom-6 right-4 w-1 h-1 bg-blue-deep/30 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '2.1s',
+                  animation: 'bounce-gentle 3.2s ease-in-out infinite, spin 7s linear infinite'
+                }}></div>
+              </div>
+              
               <div className="relative mb-6">
-                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan to-blue-deep rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md relative">
                   <span className="text-white text-xl font-bold font-poppins">3</span>
+                  
+                  {/* Partículas alrededor del círculo */}
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-cyan/80 rounded-full animate-ping-slow" style={{animationDelay: '0.6s'}}></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-deep/80 rounded-full animate-ping-slow" style={{animationDelay: '1.2s'}}></div>
+                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-cyan/60 rounded-full animate-ping-slow" style={{animationDelay: '1.8s'}}></div>
+                  <div className="absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-blue-deep/60 rounded-full animate-ping-slow" style={{animationDelay: '2.4s'}}></div>
                 </div>
               </div>
-              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-blue-deep transition-colors duration-300">
                 {t.home_process_step3_title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -367,13 +463,46 @@ const Home: React.FC = () => {
             </div>
 
             {/* Step 4 */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+              {/* Partículas flotantes para Step 4 */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Partícula con movimiento de rebote y rotación */}
+                <div className="absolute top-4 left-4 w-1.5 h-1.5 bg-blue-deep/50 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '0.9s',
+                  animation: 'bounce-gentle 2.3s ease-in-out infinite, spin 5.5s linear infinite'
+                }}></div>
+                
+                {/* Partícula con trayectoria en forma de estrella */}
+                <div className="absolute top-6 right-6 w-1 h-1 bg-magenta/60 rounded-full" style={{
+                  animationDelay: '1.4s',
+                  animation: 'star 7s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con movimiento de hélice */}
+                <div className="absolute bottom-8 left-6 w-1 h-1 bg-blue-deep/40 rounded-full" style={{
+                  animationDelay: '1.9s',
+                  animation: 'helix 5.5s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con rebote y escalado */}
+                <div className="absolute bottom-6 right-4 w-1.5 h-1.5 bg-magenta/30 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '2.4s',
+                  animation: 'bounce-gentle 3.8s ease-in-out infinite, scale-breathe 4.2s ease-in-out infinite'
+                }}></div>
+              </div>
+              
               <div className="relative mb-6">
-                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-deep to-magenta rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md relative">
                   <span className="text-white text-xl font-bold font-poppins">4</span>
+                  
+                  {/* Partículas alrededor del círculo */}
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-blue-deep/80 rounded-full animate-ping-slow" style={{animationDelay: '0.8s'}}></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-magenta/80 rounded-full animate-ping-slow" style={{animationDelay: '1.4s'}}></div>
+                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-blue-deep/60 rounded-full animate-ping-slow" style={{animationDelay: '2s'}}></div>
+                  <div className="absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-magenta/60 rounded-full animate-ping-slow" style={{animationDelay: '2.6s'}}></div>
                 </div>
               </div>
-              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-magenta transition-colors duration-300">
                 {t.home_process_step4_title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -382,13 +511,46 @@ const Home: React.FC = () => {
             </div>
 
             {/* Step 5 */}
-            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+              {/* Partículas flotantes para Step 5 */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Partícula con movimiento de rebote y escalado */}
+                <div className="absolute top-4 left-4 w-1 h-1 bg-magenta/60 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '1.2s',
+                  animation: 'bounce-gentle 2.7s ease-in-out infinite, scale-breathe 3.8s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con trayectoria en forma de corazón */}
+                <div className="absolute top-6 right-6 w-1.5 h-1.5 bg-cyan/50 rounded-full" style={{
+                  animationDelay: '1.7s',
+                  animation: 'heart 6.5s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con movimiento de mariposa */}
+                <div className="absolute bottom-8 left-6 w-1.5 h-1.5 bg-magenta/40 rounded-full" style={{
+                  animationDelay: '2.2s',
+                  animation: 'butterfly 5s ease-in-out infinite'
+                }}></div>
+                
+                {/* Partícula con rebote y rotación */}
+                <div className="absolute bottom-6 right-4 w-1 h-1 bg-cyan/30 rounded-full animate-bounce-gentle" style={{
+                  animationDelay: '2.7s',
+                  animation: 'bounce-gentle 3.1s ease-in-out infinite, spin 6.8s linear infinite'
+                }}></div>
+              </div>
+              
               <div className="relative mb-6">
-                <div className="w-14 h-14 bg-lime-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-14 h-14 bg-gradient-to-br from-magenta to-cyan rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md relative">
                   <span className="text-white text-xl font-bold font-poppins">5</span>
+                  
+                  {/* Partículas alrededor del círculo */}
+                  <div className="absolute -top-1 -left-1 w-2 h-2 bg-magenta/80 rounded-full animate-ping-slow" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan/80 rounded-full animate-ping-slow" style={{animationDelay: '1.6s'}}></div>
+                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-magenta/60 rounded-full animate-ping-slow" style={{animationDelay: '2.2s'}}></div>
+                  <div className="absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-cyan/60 rounded-full animate-ping-slow" style={{animationDelay: '2.8s'}}></div>
                 </div>
               </div>
-              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-lime-600 transition-colors duration-300">
+              <h3 className="text-lg font-poppins font-bold text-gray-900 mb-3 group-hover:text-cyan transition-colors duration-300">
                 {t.home_process_step5_title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -418,17 +580,97 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Strip */}
-      <section className="bg-magenta text-white">
-        <div className="container mx-auto px-6 py-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold">{t.home_cta_strip_title}</h2>
-          <Link
-            to="/contacto"
-            className="mt-6 inline-block bg-white text-magenta font-bold py-3 px-8 rounded-full text-lg font-poppins
-                       transform hover:scale-105 transition-transform duration-300"
-          >
-            {t.cta_button}
-          </Link>
+      {/* CTA Strip Mejorado */}
+      <section className="relative bg-gradient-to-br from-magenta via-pink-600 to-purple-600 text-white overflow-hidden">
+        {/* Partículas flotantes de fondo */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-10 w-2 h-2 bg-white/30 rounded-full animate-float" style={{animationDelay: '0s'}}></div>
+          <div className="absolute top-20 right-20 w-3 h-3 bg-white/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-20 left-20 w-1.5 h-1.5 bg-white/25 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-10 right-10 w-2 h-2 bg-white/15 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-white/20 rounded-full animate-float" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-white/25 rounded-full animate-float" style={{animationDelay: '1.8s'}}></div>
+        </div>
+        
+        {/* Patrón de fondo sutil */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+            backgroundSize: '30px 30px'
+          }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 py-20 text-center relative z-10">
+          {/* Icono decorativo superior */}
+          <div className="mb-8 flex justify-center">
+            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 animate-pulse-slow">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Título principal con animación */}
+          <h2 className="text-4xl md:text-6xl font-poppins font-bold mb-6 leading-tight" style={{
+            textShadow: '0 4px 20px rgba(0,0,0,0.3)'
+          }}>
+            {t.home_cta_strip_title}
+          </h2>
+          
+          {/* Subtítulo motivacional */}
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed font-light">
+            {t.home_cta_subtitle}
+          </p>
+          
+          {/* Estadísticas de confianza */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{t.home_cta_stats_projects}</div>
+              <div className="text-white/80 text-sm md:text-base">{t.home_cta_stats_projects_label}</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{t.home_cta_stats_satisfaction}</div>
+              <div className="text-white/80 text-sm md:text-base">{t.home_cta_stats_satisfaction_label}</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{t.home_cta_stats_support}</div>
+              <div className="text-white/80 text-sm md:text-base">{t.home_cta_stats_support_label}</div>
+            </div>
+          </div>
+          
+          {/* Botón CTA mejorado */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/contacto"
+              className="group relative inline-flex items-center bg-white text-magenta font-bold py-4 px-10 rounded-full text-lg font-poppins
+                         transform hover:scale-105 hover:shadow-2xl transition-all duration-500 overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center">
+                {t.cta_button}
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+              
+              {/* Efecto de brillo en hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                            transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            </Link>
+            
+            {/* Botón secundario */}
+            <button className="group inline-flex items-center border-2 border-white/30 text-white font-medium py-4 px-8 rounded-full text-lg font-poppins
+                             hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm">
+              <svg className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {t.home_cta_button_portfolio}
+            </button>
+          </div>
+          
+          {/* Texto de confianza */}
+          <p className="text-white/70 text-sm mt-8 max-w-2xl mx-auto">
+            ✨ {t.home_cta_trust_text}
+          </p>
         </div>
       </section>
     </div>

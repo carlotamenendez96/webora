@@ -107,6 +107,77 @@
             animation: scale-breathe 6s ease-in-out infinite;
         }
         
+        /* Nuevas animaciones para trayectorias complejas */
+        @keyframes spiral {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(10px, -10px) rotate(90deg); }
+            50% { transform: translate(0, -20px) rotate(180deg); }
+            75% { transform: translate(-10px, -10px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        @keyframes infinity {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(8px, -8px); }
+            50% { transform: translate(0, -16px); }
+            75% { transform: translate(-8px, -8px); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            25% { transform: translateY(-12px) scale(1.2); }
+            50% { transform: translateY(-8px) scale(0.8); }
+            75% { transform: translateY(-4px) scale(1.1); }
+        }
+        
+        @keyframes diamond {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(8px, -8px) rotate(45deg); }
+            50% { transform: translate(0, -16px) rotate(90deg); }
+            75% { transform: translate(-8px, -8px) rotate(135deg); }
+            100% { transform: translate(0, 0) rotate(180deg); }
+        }
+        
+        @keyframes zigzag {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(6px, -6px); }
+            50% { transform: translate(-6px, -12px); }
+            75% { transform: translate(6px, -6px); }
+        }
+        
+        @keyframes star {
+            0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            20% { transform: translate(6px, -6px) rotate(72deg) scale(1.2); }
+            40% { transform: translate(0, -12px) rotate(144deg) scale(0.8); }
+            60% { transform: translate(-6px, -6px) rotate(216deg) scale(1.1); }
+            80% { transform: translate(0, 0) rotate(288deg) scale(0.9); }
+            100% { transform: translate(0, 0) rotate(360deg) scale(1); }
+        }
+        
+        @keyframes helix {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(8px, -8px) rotate(90deg); }
+            50% { transform: translate(0, -16px) rotate(180deg); }
+            75% { transform: translate(-8px, -8px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        @keyframes heart {
+            0% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(4px, -4px) scale(1.1); }
+            50% { transform: translate(0, -8px) scale(0.9); }
+            75% { transform: translate(-4px, -4px) scale(1.05); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+        
+        @keyframes butterfly {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(6px, -6px) rotate(15deg); }
+            50% { transform: translate(0, -12px) rotate(0deg); }
+            75% { transform: translate(-6px, -6px) rotate(-15deg); }
+        }
+        
         /* Mejoras para el scroll suave */
         html {
             scroll-behavior: smooth;
