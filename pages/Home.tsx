@@ -8,6 +8,8 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import { MOCK_SERVICES, MOCK_PROJECTS, MOCK_TESTIMONIALS } from '../constants';
 import { Translation } from '../types';
 import { ArrowRight, Star } from 'lucide-react';
+import PhysicsTags from '../components/PhysicsTags';
+import TagsPhysics from '../components/Tagsphysics';
 
 import { gsap, ScrollTrigger, SplitText } from '../utils/gsap';
 
@@ -200,6 +202,10 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* <section>
+        <PhysicsTags />
+      </section> */}
+
       
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-deep/5">
@@ -238,7 +244,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
+      <section className=" bg-gradient-to-br from-white-50 to-blue-deep/5">
+        <TagsPhysics />
+      </section>
       {/* Results Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
