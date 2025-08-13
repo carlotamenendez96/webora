@@ -111,6 +111,16 @@ export const translations: { [key: string]: Translation } = {
     about_story_paragraph3: "Soy Juan Paulino, fundador de nxerio. Durante más de 7 años he trabajado con negocios que, como el tuyo, necesitaban dar el salto digital.",
     about_story_paragraph4: "En nxerio no solo creamos webs, creamos herramientas que trabajan para ti. Si sientes que tu negocio merece más, estamos aquí para hacerlo realidad.",
     
+    // Sección de texto motivacional
+    about_motivational_title: "¡Hola!",
+    about_motivational_paragraph1: "Si estás aquí, es muy probable que estés buscando transformar una idea brillante en un servicio o producto digital que eleve tu negocio a nuevas cotas.",
+    about_motivational_paragraph2: "Entendemos que confiar algo tan importante en un tercero, puede resultar una decisión complicada. Tal vez has tenido experiencias pasadas que no salieron como esperabas, o quizás simplemente te sientes abrumado ante el reto tecnológico. No te preocupes, estás en el lugar perfecto.",
+    about_motivational_paragraph3: "Desde el momento en que decides trabajar con nosotros, tu visión se convierte en nuestra misión. Olvídate de posibles tensiones al colaborar con otros equipos. No solo aspiramos a cumplir tus expectativas, vamos a superarlas. Y además, te garantizamos que vas a disfrutar del PROCESO.",
+    about_motivational_paragraph4: "Hemos diseñado meticulosamente un proceso de trabajo sistematizado, para garantizar: claridad, comunicación honesta y efectiva, y cumplimiento de plazos, presupuesto y objetivos. Con nosotros, el proceso es tan satisfactorio como el producto final.",
+    about_motivational_question: "¿Estás preparado?",
+    about_motivational_paragraph5: "Desde nuestro primer contacto, vamos a centrarnos en entender al detalle tus necesidades para ofrecerte la mejor solución.",
+    about_motivational_cta: "Hagamos magia juntos. Hablemos ;)",
+    
     // Sección de proceso
     home_process_title: "¿Cómo lo hacemos?",
     home_process_subtitle: "Fácil de empezar y ágil hasta el final. Mantendremos las comunicaciones asíncronas y reduciremos las reuniones al mínimo, por tu bien y por el mío.",
@@ -279,6 +289,16 @@ export const translations: { [key: string]: Translation } = {
     about_story_paragraph2: "We redesigned their page and within a month they were already receiving more inquiries than ever. That's when I understood that a website isn't just something pretty, it's the key to growing a business.",
     about_story_paragraph3: "I'm Juan Paulino, founder of nxerio. For more than 7 years I have worked with businesses that, like yours, needed to make the digital leap.",
     about_story_paragraph4: "At nxerio we don't just create websites, we create tools that work for you. If you feel your business deserves more, we are here to make it happen.",
+    
+    // Motivational text section
+    about_motivational_title: "Hello!",
+    about_motivational_paragraph1: "If you're here, it's very likely that you're looking to transform a brilliant idea into a digital service or product that elevates your business to new heights.",
+    about_motivational_paragraph2: "We understand that trusting something so important to a third party can be a complicated decision. Maybe you've had past experiences that didn't turn out as expected, or perhaps you simply feel overwhelmed by the technological challenge. Don't worry, you're in the perfect place.",
+    about_motivational_paragraph3: "From the moment you decide to work with us, your vision becomes our mission. Forget about possible tensions when collaborating with other teams. We don't just aspire to meet your expectations, we're going to exceed them. And furthermore, we guarantee that you're going to enjoy the PROCESS.",
+    about_motivational_paragraph4: "We have meticulously designed a systematized work process to guarantee: clarity, honest and effective communication, and compliance with deadlines, budget, and objectives. With us, the process is as satisfying as the final product.",
+    about_motivational_question: "Are you ready?",
+    about_motivational_paragraph5: "From our first contact, we will focus on understanding your needs in detail to offer you the best solution.",
+    about_motivational_cta: "Let's make magic together. Let's talk ;)",
     
     // Process section
     home_process_title: "How do we do it?",

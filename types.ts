@@ -159,6 +159,16 @@ export interface Translation {
   about_story_paragraph2: string;
   about_story_paragraph3: string;
   about_story_paragraph4: string;
+  
+  // Sección de texto motivacional
+  about_motivational_title: string;
+  about_motivational_paragraph1: string;
+  about_motivational_paragraph2: string;
+  about_motivational_paragraph3: string;
+  about_motivational_paragraph4: string;
+  about_motivational_question: string;
+  about_motivational_paragraph5: string;
+  about_motivational_cta: string;
 
   // Blog Page
   blog_page_title: string;

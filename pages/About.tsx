@@ -67,13 +67,28 @@ const About: React.FC = () => {
         <div className="container mx-auto px-6">
           <SectionTitle title={t.about_page_title} subtitle={t.about_page_subtitle} />
           
-          <div className="grid lg:grid-cols-2 gap-16 items-center mt-16">
-            <div className="prose lg:prose-xl max-w-none">
-              <img loading="lazy" src="https://picsum.photos/seed/team/800/600" alt="Webora Team" className="rounded-lg shadow-xl" />
-            </div>
-            <div>
-              <h3 className="text-3xl font-poppins font-bold text-blue-deep">{t.about_philosophy_title}</h3>
-              <p className="mt-4 text-lg text-gray-700">{t.about_philosophy_text}</p>
+   
+
+          {/* Sección de texto motivacional */}
+          <div className="mt-24 bg-gradient-to-br from-blue-50 to-magenta-50 rounded-2xl p-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-poppins font-bold text-blue-deep mb-8">{t.about_motivational_title}</h2>
+              
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>{t.about_motivational_paragraph1}</p>
+                <p>{t.about_motivational_paragraph2}</p>
+                <p>{t.about_motivational_paragraph3}</p>
+                <p>{t.about_motivational_paragraph4}</p>
+                
+                <div className="my-8">
+                  <h3 className="text-2xl font-poppins font-bold text-magenta mb-4">{t.about_motivational_question}</h3>
+                  <p>{t.about_motivational_paragraph5}</p>
+                </div>
+                
+                <div className="mt-10">
+                  <p className="text-xl font-poppins font-semibold text-blue-deep">{t.about_motivational_cta}</p>
+                </div>
+              </div>
             </div>
           </div>
 
