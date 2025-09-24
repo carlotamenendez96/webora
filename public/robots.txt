@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://webora.com/sitemap.xml
+
+# Crawl-delay para ser respetuosos con los servidores
+Crawl-delay: 1
+
+# Permitir acceso a recursos importantes
+Allow: /assets/
+Allow: /img/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.json
+
+# Bloquear archivos innecesarios
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /*.log

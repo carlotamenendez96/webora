@@ -130,6 +130,19 @@ const Home: React.FC = () => {
   useDocumentHead({
     title: `Webora | ${t.home_hero_title}`,
     description: t.home_hero_subtitle,
+    keywords: "agencia digital, desarrollo web, diseño web, marketing digital, SEO, branding, páginas web, tiendas online, España",
+    ogTitle: `Webora | ${t.home_hero_title}`,
+    ogDescription: t.home_hero_subtitle,
+    ogImage: "/og-image.jpg",
+    ogUrl: "https://webora.com",
+    canonical: "https://webora.com",
+    twitterCard: "summary_large_image",
+    twitterTitle: `Webora | ${t.home_hero_title}`,
+    twitterDescription: t.home_hero_subtitle,
+    twitterImage: "/og-image.jpg",
+    author: "Webora Digital Agency",
+    robots: "index, follow",
+    lang: "es"
   });
 
   return (

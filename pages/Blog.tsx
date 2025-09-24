@@ -20,8 +20,21 @@ const Blog: React.FC = () => {
 
   // Set document head metadata
   useDocumentHead({
-    title: `${t.nav_blog} | Webora`,
+    title: `${t.nav_blog} | Webora Digital Agency`,
     description: t.blog_page_subtitle,
+    keywords: "blog, artículos web, marketing digital, desarrollo web, diseño web, SEO, tutoriales, España",
+    ogTitle: `${t.nav_blog} | Webora Digital Agency`,
+    ogDescription: t.blog_page_subtitle,
+    ogImage: "/og-image.jpg",
+    ogUrl: "https://webora.com/blog",
+    canonical: "https://webora.com/blog",
+    twitterCard: "summary_large_image",
+    twitterTitle: `${t.nav_blog} | Webora Digital Agency`,
+    twitterDescription: t.blog_page_subtitle,
+    twitterImage: "/og-image.jpg",
+    author: "Webora Digital Agency",
+    robots: "index, follow",
+    lang: "es"
   });
 
   return (

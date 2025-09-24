@@ -42,8 +42,21 @@ const Portfolio: React.FC = () => {
 
   // Set document head metadata
   useDocumentHead({
-    title: `${t.nav_portfolio} | Webora`,
+    title: `${t.nav_portfolio} | Webora Digital Agency`,
     description: t.portfolio_page_subtitle,
+    keywords: "portafolio, proyectos web, casos de éxito, desarrollo web, diseño web, proyectos digitales, España",
+    ogTitle: `${t.nav_portfolio} | Webora Digital Agency`,
+    ogDescription: t.portfolio_page_subtitle,
+    ogImage: "/og-image.jpg",
+    ogUrl: "https://webora.com/portafolio",
+    canonical: "https://webora.com/portafolio",
+    twitterCard: "summary_large_image",
+    twitterTitle: `${t.nav_portfolio} | Webora Digital Agency`,
+    twitterDescription: t.portfolio_page_subtitle,
+    twitterImage: "/og-image.jpg",
+    author: "Webora Digital Agency",
+    robots: "index, follow",
+    lang: "es"
   });
 
   return (

@@ -42,8 +42,21 @@ const Contact: React.FC = () => {
 
   // Set document head metadata
   useDocumentHead({
-    title: `${t.nav_contact} | Webora`,
+    title: `${t.nav_contact} | Webora Digital Agency`,
     description: t.contact_page_subtitle,
+    keywords: "contacto, agencia digital, presupuesto, consultoría web, desarrollo web, diseño web, España",
+    ogTitle: `${t.nav_contact} | Webora Digital Agency`,
+    ogDescription: t.contact_page_subtitle,
+    ogImage: "/og-image.jpg",
+    ogUrl: "https://webora.com/contacto",
+    canonical: "https://webora.com/contacto",
+    twitterCard: "summary_large_image",
+    twitterTitle: `${t.nav_contact} | Webora Digital Agency`,
+    twitterDescription: t.contact_page_subtitle,
+    twitterImage: "/og-image.jpg",
+    author: "Webora Digital Agency",
+    robots: "index, follow",
+    lang: "es"
   });
 
   return (

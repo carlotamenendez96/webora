@@ -139,8 +139,21 @@ const Services: React.FC = () => {
 
   // Set document head metadata
   useDocumentHead({
-    title: `${t.nav_services} | Webora`,
+    title: `${t.nav_services} | Webora Digital Agency`,
     description: t.services_page_subtitle,
+    keywords: "servicios digitales, desarrollo web, diseño web, marketing digital, SEO, branding, consultoría digital, España",
+    ogTitle: `${t.nav_services} | Webora Digital Agency`,
+    ogDescription: t.services_page_subtitle,
+    ogImage: "/og-image.jpg",
+    ogUrl: "https://webora.com/servicios",
+    canonical: "https://webora.com/servicios",
+    twitterCard: "summary_large_image",
+    twitterTitle: `${t.nav_services} | Webora Digital Agency`,
+    twitterDescription: t.services_page_subtitle,
+    twitterImage: "/og-image.jpg",
+    author: "Webora Digital Agency",
+    robots: "index, follow",
+    lang: "es"
   });
 
   return (

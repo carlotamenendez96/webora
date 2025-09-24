@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
@@ -27,7 +27,7 @@ const ScrollToTopOnNavigate: React.FC = () => {
 const App: React.FC = () => {
   return (
     <LanguageProvider>
-      <HashRouter>
+      <BrowserRouter>
         <div className="bg-white text-gray-800 font-inter">
           <Header />
           <main>
@@ -44,7 +44,7 @@ const App: React.FC = () => {
           <Footer />
           <ScrollToTopButton />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </LanguageProvider>
   );
 };

@@ -57,8 +57,21 @@ const About: React.FC = () => {
 
   // Set document head metadata
   useDocumentHead({
-    title: `${t.nav_about} | Webora`,
+    title: `${t.nav_about} | Webora Digital Agency`,
     description: t.about_page_subtitle,
+    keywords: "sobre nosotros, agencia digital, equipo webora, experiencia, trayectoria, historia, valores, España",
+    ogTitle: `${t.nav_about} | Webora Digital Agency`,
+    ogDescription: t.about_page_subtitle,
+    ogImage: "/og-image.jpg",
+    ogUrl: "https://webora.com/nosotros",
+    canonical: "https://webora.com/nosotros",
+    twitterCard: "summary_large_image",
+    twitterTitle: `${t.nav_about} | Webora Digital Agency`,
+    twitterDescription: t.about_page_subtitle,
+    twitterImage: "/og-image.jpg",
+    author: "Webora Digital Agency",
+    robots: "index, follow",
+    lang: "es"
   });
 
   return (

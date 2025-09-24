@@ -7,12 +7,36 @@ interface DocumentHeadProps {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogUrl?: string;
   canonical?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  author?: string;
+  robots?: string;
+  lang?: string;
 }
 
 export const useDocumentHead = (props: DocumentHeadProps) => {
   useEffect(() => {
-    const { title, description, keywords, ogTitle, ogDescription, ogImage, canonical } = props;
+    const { 
+      title, 
+      description, 
+      keywords, 
+      ogTitle, 
+      ogDescription, 
+      ogImage, 
+      ogUrl,
+      canonical,
+      twitterCard,
+      twitterTitle,
+      twitterDescription,
+      twitterImage,
+      author,
+      robots,
+      lang
+    } = props;
 
     // Update document title
     if (title) {
@@ -81,6 +105,85 @@ export const useDocumentHead = (props: DocumentHeadProps) => {
         document.head.appendChild(canonicalLink);
       }
       canonicalLink.setAttribute('href', canonical);
+    }
+
+    // Update Open Graph URL
+    if (ogUrl) {
+      let ogUrlMeta = document.querySelector('meta[property="og:url"]');
+      if (!ogUrlMeta) {
+        ogUrlMeta = document.createElement('meta');
+        ogUrlMeta.setAttribute('property', 'og:url');
+        document.head.appendChild(ogUrlMeta);
+      }
+      ogUrlMeta.setAttribute('content', ogUrl);
+    }
+
+    // Update Twitter Card meta tags
+    if (twitterCard) {
+      let twitterCardMeta = document.querySelector('meta[name="twitter:card"]');
+      if (!twitterCardMeta) {
+        twitterCardMeta = document.createElement('meta');
+        twitterCardMeta.setAttribute('name', 'twitter:card');
+        document.head.appendChild(twitterCardMeta);
+      }
+      twitterCardMeta.setAttribute('content', twitterCard);
+    }
+
+    if (twitterTitle) {
+      let twitterTitleMeta = document.querySelector('meta[name="twitter:title"]');
+      if (!twitterTitleMeta) {
+        twitterTitleMeta = document.createElement('meta');
+        twitterTitleMeta.setAttribute('name', 'twitter:title');
+        document.head.appendChild(twitterTitleMeta);
+      }
+      twitterTitleMeta.setAttribute('content', twitterTitle);
+    }
+
+    if (twitterDescription) {
+      let twitterDescMeta = document.querySelector('meta[name="twitter:description"]');
+      if (!twitterDescMeta) {
+        twitterDescMeta = document.createElement('meta');
+        twitterDescMeta.setAttribute('name', 'twitter:description');
+        document.head.appendChild(twitterDescMeta);
+      }
+      twitterDescMeta.setAttribute('content', twitterDescription);
+    }
+
+    if (twitterImage) {
+      let twitterImageMeta = document.querySelector('meta[name="twitter:image"]');
+      if (!twitterImageMeta) {
+        twitterImageMeta = document.createElement('meta');
+        twitterImageMeta.setAttribute('name', 'twitter:image');
+        document.head.appendChild(twitterImageMeta);
+      }
+      twitterImageMeta.setAttribute('content', twitterImage);
+    }
+
+    // Update author
+    if (author) {
+      let authorMeta = document.querySelector('meta[name="author"]');
+      if (!authorMeta) {
+        authorMeta = document.createElement('meta');
+        authorMeta.setAttribute('name', 'author');
+        document.head.appendChild(authorMeta);
+      }
+      authorMeta.setAttribute('content', author);
+    }
+
+    // Update robots
+    if (robots) {
+      let robotsMeta = document.querySelector('meta[name="robots"]');
+      if (!robotsMeta) {
+        robotsMeta = document.createElement('meta');
+        robotsMeta.setAttribute('name', 'robots');
+        document.head.appendChild(robotsMeta);
+      }
+      robotsMeta.setAttribute('content', robots);
+    }
+
+    // Update language
+    if (lang) {
+      document.documentElement.lang = lang;
     }
   }, [props]);
 };

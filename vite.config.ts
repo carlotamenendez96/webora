@@ -18,6 +18,27 @@ export default defineConfig(({ mode }) => {
       },
       optimizeDeps: {
         include: ['react', 'react-dom', 'react-router-dom']
+      },
+      // Configuración para SPA routing - importante para SEO
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              vendor: ['react', 'react-dom'],
+              router: ['react-router-dom']
+            }
+          }
+        }
+      },
+      // Configuración del servidor para SPA
+      server: {
+        historyApiFallback: true,
+        port: 3000,
+        open: true
+      },
+      preview: {
+        port: 3000,
+        open: true
       }
     };
 });
