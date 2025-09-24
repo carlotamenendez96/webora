@@ -45,6 +45,8 @@ export interface Translation {
   nav_blog: string;
   nav_contact: string;
   cta_button: string;
+  menu_navigation: string;
+  menu_current_page: string;
   view_case_study: string;
   read_more: string;
 
