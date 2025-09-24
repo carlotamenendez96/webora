@@ -49,12 +49,10 @@ const Header: React.FC = () => {
               {({ isActive }) => (
                 <>
                   {link.label}
-                  {/* Indicador de hover */}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan to-magenta transition-all duration-300 group-hover:w-full"></div>
-                  {/* Punto de estado activo */}
-                  {isActive && (
-                    <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan rounded-full animate-pulse"></div>
-                  )}
+                  {/* Indicador de hover y estado activo */}
+                  <div className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan to-magenta transition-all duration-300 ${
+                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></div>
                 </>
               )}
             </NavLink>
@@ -110,8 +108,10 @@ const Header: React.FC = () => {
                 {({ isActive }) => (
                   <>
                     {link.label}
-                    {/* Indicador de hover móvil */}
-                    <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan to-magenta transition-all duration-300 group-hover:w-full"></div>
+                    {/* Indicador de hover y estado activo móvil */}
+                    <div className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan to-magenta transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></div>
                   </>
                 )}
               </NavLink>

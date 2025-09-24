@@ -19,20 +19,25 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
     setIsSubmitting(true);
     setIsSuccess(false);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    // Let Formspree handle the submission
+    // The form will submit naturally to Formspree
   };
   
   useEffect(() => {
     gsap.fromTo(pageRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
+    
+    // Check if form was submitted successfully (from Formspree redirect)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      setIsSuccess(true);
+      setIsSubmitting(false);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      // Clean URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+      setTimeout(() => setIsSuccess(false), 5000);
+    }
   }, []);
 
   // Set document head metadata
@@ -49,7 +54,13 @@ const Contact: React.FC = () => {
           
           <div className="grid lg:grid-cols-3 gap-12 mt-12 max-w-6xl mx-auto">
             <div className="lg:col-span-2 bg-gray-100 p-8 rounded-lg shadow-md">
-              <form onSubmit={handleSubmit}>
+              <form 
+                action="https://formspree.io/f/xovlrzyz"
+                method="POST"
+                onSubmit={handleSubmit}
+              >
+                <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde Webora" />
+                <input type="hidden" name="_next" value="?success=true" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">{t.contact_form_name}</label>
@@ -87,23 +98,23 @@ const Contact: React.FC = () => {
                 <Mail className="text-magenta mt-1 mr-4 flex-shrink-0" size={24} />
                 <div>
                   <h4 className="font-bold">Email</h4>
-                  <a href="mailto:hola@webora.com" className="text-gray-600 hover:text-magenta">hola@webora.com</a>
+                  <a href="mailto:carlotamenendezalvarez96@gmail.com" className="text-gray-600 hover:text-magenta">carlotamenendezalvarez96@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="text-magenta mt-1 mr-4 flex-shrink-0" size={24} />
                 <div>
                   <h4 className="font-bold">Teléfono</h4>
-                  <a href="tel:+34123456789" className="text-gray-600 hover:text-magenta">+34 123 456 789</a>
+                  <a href="tel:+34123456789" className="text-gray-600 hover:text-magenta">+34 645 47 51 53</a>
                 </div>
               </div>
-              <div className="flex items-start">
+              {/* <div className="flex items-start">
                 <MapPin className="text-magenta mt-1 mr-4 flex-shrink-0" size={24} />
                 <div>
                   <h4 className="font-bold">Oficina</h4>
                   <p className="text-gray-600">{t.contact_info_address}</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
